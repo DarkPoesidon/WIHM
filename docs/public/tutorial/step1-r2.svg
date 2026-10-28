@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow1" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="480" rx="16" fill="url(#bgGrad1)" stroke="#334155" stroke-width="2" />
+
+  <!-- Header -->
+  <g transform="translate(425, 36)">
+    <text text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#f8fafc">مرحله ۱: ساخت باکت و کلیدهای Cloudflare R2</text>
+    <text text-anchor="middle" y="22" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">ذخیره رایگان تا ۱۰ گیگابایت عکس، ویدیو و فایل بدون نیاز به پرداخت</text>
+  </g>
+
+  <!-- Left Card: Creating Bucket -->
+  <g transform="translate(40, 80)" filter="url(#shadow1)">
+    <rect width="360" height="360" rx="12" fill="#1e293b" stroke="#f38020" stroke-width="1.5" />
+    <rect x="0" y="0" width="360" height="38" rx="12" fill="#f38020" />
+    <rect x="0" y="24" width="360" height="14" fill="#f38020" />
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">۱. ساخت باکت در منوی R2</text>
+
+    <!-- UI fields mockup -->
+    <text x="24" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">مسیریابی در داشبورد کلادفلر:</text>
+    <rect x="24" y="75" width="312" height="28" rx="6" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="93" font-family="monospace" font-size="11" fill="#38bdf8">dash.cloudflare.com → R2</text>
+
+    <text x="24" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">نام باکت (Bucket Name):</text>
+    <rect x="24" y="140" width="312" height="32" rx="6" fill="#0f172a" stroke="#f38020" stroke-width="1.5" />
+    <text x="35" y="161" font-family="monospace" font-size="13" fill="#f8fafc">wihm-uploads</text>
+
+    <text x="24" y="198" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">موقعیت جغرافیایی (Location):</text>
+    <rect x="24" y="208" width="312" height="30" rx="6" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="228" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Automatic (پیش‌فرض)</text>
+
+    <!-- Create Button -->
+    <rect x="24" y="260" width="312" height="36" rx="8" fill="#f38020" />
+    <text x="180" y="283" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">کلیک روی Create bucket ✓</text>
+
+    <rect x="24" y="312" width="312" height="32" rx="6" fill="#334155" fill-opacity="0.5" />
+    <text x="180" y="332" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#4ade80">✓ باکت شما ساخته شد و آماده ذخیره عکس‌هاست</text>
+  </g>
+
+  <!-- Right Card: API Tokens -->
+  <g transform="translate(450, 80)" filter="url(#shadow1)">
+    <rect width="360" height="360" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="0" y="0" width="360" height="38" rx="12" fill="#0284c7" />
+    <rect x="0" y="24" width="360" height="14" fill="#0284c7" />
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">۲. دریافت کلیدهای دسترسی (API Token)</text>
+
+    <text x="24" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">روی Manage R2 API Tokens کلیک کنید:</text>
+
+    <text x="24" y="90" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">دسترسی‌ها (Permissions):</text>
+    <rect x="24" y="100" width="312" height="30" rx="6" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" />
+    <text x="35" y="120" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">🔘 Object Read &amp; Write (انتخاب شود)</text>
+
+    <text x="24" y="150" font-family="system-ui, sans-serif" font-size="11" fill="#fbbf24">⚠️ این ۳ مقدار را در یک فایل نوت‌پد کپی کنید:</text>
+
+    <!-- Keys Box -->
+    <rect x="24" y="165" width="312" height="135" rx="8" fill="#020617" stroke="#475569" />
+    
+    <text x="35" y="190" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">1. Account ID:</text>
+    <text x="35" y="206" font-family="monospace" font-size="11" fill="#38bdf8">a1b2c3d4e5f6... (کد حساب شما)</text>
+    
+    <text x="35" y="230" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">2. Access Key ID:</text>
+    <text x="35" y="246" font-family="monospace" font-size="11" fill="#34d399">9a8b7c6d5e4f... (کلید دسترسی)</text>
+
+    <text x="35" y="270" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">3. Secret Access Key:</text>
+    <text x="35" y="286" font-family="monospace" font-size="11" fill="#fb7185">xyz123abc456... (رمز محرمانه)</text>
+
+    <!-- Note footer -->
+    <rect x="24" y="312" width="312" height="32" rx="6" fill="#334155" fill-opacity="0.5" />
+    <text x="180" y="332" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#f8fafc">این کلیدها را در مرحله ۳ در سرور Render وارد می‌کنیم</text>
+  </g>
+</svg>

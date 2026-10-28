@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="440" rx="16" fill="url(#bgGrad5)" stroke="#334155" stroke-width="2" />
+
+  <!-- Header -->
+  <g transform="translate(425, 36)">
+    <text text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#f8fafc">مرحله ۵: بیدار نگه داشتن ۲۴ ساعته سرور با UptimeRobot (اختیاری و رایگان)</text>
+    <text text-anchor="middle" y="22" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">جلوگیری از رفتن سرور Render به حالت Sleep با پینگ خودکار هر ۵ دقیقه</text>
+  </g>
+
+  <!-- Left Card: Add Monitor Settings -->
+  <g transform="translate(40, 75)" filter="url(#shadow5)">
+    <rect width="380" height="330" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <rect x="0" y="0" width="380" height="38" rx="12" fill="#10b981" />
+    <rect x="0" y="24" width="380" height="14" fill="#10b981" />
+    <text x="190" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">تنظیم مانیتور جدید در uptimerobot.com</text>
+
+    <!-- Monitor Type -->
+    <text x="24" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">نوع مانیتور (Monitor Type):</text>
+    <rect x="24" y="75" width="332" height="28" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="93" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">HTTP(s)</text>
+
+    <!-- Friendly Name -->
+    <text x="24" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">نام دلخواه (Friendly Name):</text>
+    <rect x="24" y="135" width="332" height="28" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="153" font-family="monospace" font-size="11" fill="#f8fafc">WIHM Backend Health</text>
+
+    <!-- URL -->
+    <text x="24" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">آدرس سرور (URL / IP): <tspan fill="#34d399">(به انتهای آدرس api/health اضافه کنید)</tspan></text>
+    <rect x="24" y="195" width="332" height="32" rx="5" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+    <text x="35" y="215" font-family="monospace" font-size="10.5" fill="#34d399">https://wihm-backend.onrender.com/api/health</text>
+
+    <!-- Monitoring Interval -->
+    <text x="24" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">بازه بررسی (Monitoring Interval):</text>
+    <rect x="24" y="255" width="332" height="28" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="273" font-family="system-ui, sans-serif" font-size="11" fill="#38bdf8">Every 5 minutes (هر ۵ دقیقه)</text>
+
+    <!-- Create Button -->
+    <rect x="24" y="292" width="332" height="30" rx="6" fill="#10b981" />
+    <text x="190" y="312" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a">کلیک روی Create Monitor ✓</text>
+  </g>
+
+  <!-- Right Card: Why this matters -->
+  <g transform="translate(450, 75)" filter="url(#shadow5)">
+    <rect width="360" height="330" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <rect x="0" y="0" width="360" height="38" rx="12" fill="#334155" />
+    <rect x="0" y="24" width="360" height="14" fill="#334155" />
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">مزیت این کار چیست؟</text>
+
+    <g transform="translate(24, 60)">
+      <circle cx="10" cy="12" r="8" fill="#10b981" />
+      <text x="26" y="16" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">پاسخ‌دهی آنی بدون تأخیر اولیه</text>
+      <text x="26" y="34" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">پلن‌های رایگان رندر بعد از ۱۵ دقیقه بی‌کاری به خواب می‌روند. این ابزار هر ۵ دقیقه سرور را بیدار نگه می‌دارد.</text>
+
+      <circle cx="10" cy="72" r="8" fill="#38bdf8" />
+      <text x="26" y="76" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">۱۰۰٪ بدون هزینه دائمی</text>
+      <text x="26" y="94" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">سرویس UptimeRobot تا ۵۰ مانیتور رایگان به شما می‌دهد و هیچ‌وقت از شما طلب کارت اعتباری نمی‌کند.</text>
+
+      <circle cx="10" cy="132" r="8" fill="#faad3f" />
+      <text x="26" y="136" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">نوتیفیکیشن لحظه‌ای قطعی</text>
+      <text x="26" y="154" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">اگر سرور به هر دلیلی قطع شود، بلافاصله به ایمیل شما پیام ارسال می‌شود.</text>
+
+      <!-- Badge Result -->
+      <rect x="0" y="185" width="312" height="60" rx="8" fill="#064e3b" stroke="#10b981" />
+      <text x="156" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#a7f3d0">وضعیت مانیتور: UP (آنلاین)</text>
+      <text x="156" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10.5" fill="#6ee7b7">آپ‌تایم ۹۹.۹٪ - سیستم چت همیشه آماده است</text>
+    </g>
+  </g>
+</svg>

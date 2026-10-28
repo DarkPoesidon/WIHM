@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f38020" />
+      <stop offset="100%" stop-color="#faad3f" />
+    </linearGradient>
+    <linearGradient id="renderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b4d8" />
+      <stop offset="100%" stop-color="#48cae4" />
+    </linearGradient>
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e599" />
+      <stop offset="100%" stop-color="#00b377" />
+    </linearGradient>
+    <linearGradient id="uptimeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="460" rx="16" fill="url(#bgGrad)" stroke="#334155" stroke-width="2" />
+
+  <!-- Header -->
+  <g transform="translate(450, 42)">
+    <text text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#f8fafc">معماری سیستم تماماً رایگان WIHM (100% Free Architecture)</text>
+    <text text-anchor="middle" y="24" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">ارتباط میان بخش‌های مختلف برنامه بدون نیاز به کارت بانکی یا پرداخت ۱ ریال</text>
+  </g>
+
+  <!-- User / Browser Node -->
+  <g transform="translate(50, 150)" filter="url(#shadow)">
+    <rect width="180" height="150" rx="14" fill="#1e293b" stroke="#475569" stroke-width="2" />
+    <circle cx="90" cy="45" r="22" fill="#3b82f6" />
+    <path d="M78 48 C78 40, 83 35, 90 35 C97 35, 102 40, 102 48" stroke="#ffffff" stroke-width="2.5" fill="none" />
+    <circle cx="90" cy="40" r="5" fill="#ffffff" />
+    <text x="90" y="85" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">کاربر (User / Web)</text>
+    <text x="90" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">مرورگر یا موبایل (PWA)</text>
+    <rect x="35" y="118" width="110" height="20" rx="6" fill="#334155" />
+    <text x="90" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#38bdf8">HTTPS / WSS</text>
+  </g>
+
+  <!-- Connection: User to Cloudflare Pages -->
+  <path d="M 230 190 L 330 190" stroke="#f38020" stroke-width="3" stroke-dasharray="6,4" />
+  <polygon points="330,190 320,184 320,196" fill="#f38020" />
+  <text x="280" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#f38020">باز کردن سایت</text>
+
+  <!-- Cloudflare Pages (Frontend) -->
+  <g transform="translate(340, 110)" filter="url(#shadow)">
+    <rect width="220" height="160" rx="14" fill="#1e293b" stroke="#f38020" stroke-width="2" />
+    <rect x="0" y="0" width="220" height="38" rx="14" fill="url(#cfGrad)" />
+    <rect x="0" y="24" width="220" height="14" fill="url(#cfGrad)" />
+    <text x="110" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Cloudflare Pages (فرانت‌اند)</text>
+    <text x="110" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">صفحه چت و محیط وب</text>
+    <text x="110" y="85" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">React 19 + Tailwind CSS</text>
+    <text x="110" y="103" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">هاست جهانی با سرعت بالا</text>
+    <rect x="50" y="122" width="120" height="24" rx="6" fill="#f38020" fill-opacity="0.2" stroke="#f38020" stroke-width="1" />
+    <text x="110" y="138" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fba742">کاملاً رایگان (بدون محدودیت)</text>
+  </g>
+
+  <!-- Connection: Cloudflare Pages / User to Render Server -->
+  <path d="M 560 190 L 660 190" stroke="#00b4d8" stroke-width="3" />
+  <polygon points="660,190 650,184 650,196" fill="#00b4d8" />
+  <text x="610" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#00b4d8">API / SSE</text>
+
+  <!-- Render Web Service (Backend) -->
+  <g transform="translate(670, 110)" filter="url(#shadow)">
+    <rect width="190" height="160" rx="14" fill="#1e293b" stroke="#00b4d8" stroke-width="2" />
+    <rect x="0" y="0" width="190" height="38" rx="14" fill="url(#renderGrad)" />
+    <rect x="0" y="24" width="190" height="14" fill="url(#renderGrad)" />
+    <text x="95" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0f172a">Render (بک‌اند / سرور)</text>
+    <text x="95" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">موتور پردازش چت</text>
+    <text x="95" y="85" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Node.js Express 5</text>
+    <text x="95" y="103" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">روشن بودن ۲۴ ساعته</text>
+    <rect x="25" y="122" width="140" height="24" rx="6" fill="#00b4d8" fill-opacity="0.15" stroke="#00b4d8" stroke-width="1" />
+    <text x="95" y="138" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">پلن Free رایگان</text>
+  </g>
+
+  <!-- Neon Database Node (Bottom Right) -->
+  <g transform="translate(670, 310)" filter="url(#shadow)">
+    <rect width="190" height="120" rx="14" fill="#1e293b" stroke="#00e599" stroke-width="2" />
+    <rect x="0" y="0" width="190" height="32" rx="14" fill="url(#neonGrad)" />
+    <rect x="0" y="20" width="190" height="12" fill="url(#neonGrad)" />
+    <text x="95" y="21" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">Neon (دیتابیس)</text>
+    <text x="95" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">PostgreSQL ابری</text>
+    <text x="95" y="73" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">ذخیره امن پیام‌ها و کاربران</text>
+    <text x="95" y="98" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#34d399">۰.۵ گیگ رایگان دائمی</text>
+  </g>
+
+  <!-- Connection: Render to Neon -->
+  <path d="M 765 270 L 765 310" stroke="#00e599" stroke-width="2.5" />
+  <polygon points="765,310 760,300 770,300" fill="#00e599" />
+
+  <!-- Cloudflare R2 Node (Bottom Middle) -->
+  <g transform="translate(340, 310)" filter="url(#shadow)">
+    <rect width="220" height="120" rx="14" fill="#1e293b" stroke="#faad3f" stroke-width="2" />
+    <rect x="0" y="0" width="220" height="32" rx="14" fill="url(#cfGrad)" />
+    <rect x="0" y="20" width="220" height="12" fill="url(#cfGrad)" />
+    <text x="110" y="21" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Cloudflare R2 (انبار فایل و عکس)</text>
+    <text x="110" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">Object Storage (مشابه S3)</text>
+    <text x="110" y="73" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">آپلود مستقیم بدون فشار به سرور</text>
+    <text x="110" y="98" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fba742">۱۰ گیگابایت فضای رایگان</text>
+  </g>
+
+  <!-- Connection: User directly to R2 for uploads -->
+  <path d="M 140 300 C 140 370, 240 370, 340 370" stroke="#faad3f" stroke-width="2" stroke-dasharray="4,4" fill="none" />
+  <polygon points="340,370 330,365 330,375" fill="#faad3f" />
+  <text x="235" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#faad3f">ارسال مستقیم عکس و فایل</text>
+
+  <!-- UptimeRobot Node (Bottom Left) -->
+  <g transform="translate(50, 330)" filter="url(#shadow)">
+    <rect width="180" height="100" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <rect x="0" y="0" width="180" height="28" rx="14" fill="url(#uptimeGrad)" />
+    <rect x="0" y="16" width="180" height="12" fill="url(#uptimeGrad)" />
+    <text x="90" y="19" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">UptimeRobot (پینگ خودکار)</text>
+    <text x="90" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#f8fafc">بیدار نگه داشتن رایگان سرور</text>
+    <text x="90" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">پینگ هر ۵ دقیقه یکبار</text>
+    <text x="90" y="88" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#34d399">جلوگیری از Sleep سرور</text>
+  </g>
+</svg>

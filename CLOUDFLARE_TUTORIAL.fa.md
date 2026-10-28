@@ -4,13 +4,19 @@
 
 ---
 
-## 🧭 نقشه راه (در یک نگاه)
+## 🧭 نقشه راه و معماری سیستم (در یک نگاه)
 
 راه‌اندازی این پیام‌رسان مثل سرهم کردن چند قطعه پازل آماده است:
 1. **ساخت انبار فایل‌ها و عکس‌ها** در Cloudflare R2 (برای ذخیره رایگان عکس‌ها و فایل‌ها)
 2. **ساخت دیتابیس رایگان** در Neon (برای ذخیره رایگان پیام‌ها و کاربران)
 3. **روشن کردن سرور پیام‌رسان** در Render (پردازش چت متنی و آنلاین بودن)
 4. **روشن کردن برنامه و سایت** در Cloudflare Pages (صفحه چت برای کاربران)
+
+<div align="center">
+
+![معماری کلی سیستم](./docs/public/tutorial/step0-architecture.svg)
+
+</div>
 
 ---
 
@@ -24,6 +30,12 @@
 ## 🛠️ مرحله ۱: ساخت انبار ذخیره عکس و فایل (Cloudflare R2)
 
 کلادفلر تا **۱۰ گیگابایت** فضای ذخیره عکس و فایل رایگان به شما می‌دهد و هزینه ترافیک دانلود آن صفر است.
+
+<div align="center">
+
+![مرحله ۱: تنظیمات باکت و کلیدهای کلادفلر R2](./docs/public/tutorial/step1-r2.svg)
+
+</div>
 
 1. وارد سایت [dash.cloudflare.com](https://dash.cloudflare.com) شوید.
 2. از منوی سمت چپ، روی گزینه **R2** (یا **Storage > R2**) کلیک کنید.
@@ -48,6 +60,12 @@
 
 برای اینکه پیام‌ها و کاربران ذخیره شوند، از سرویس رایگان و ابری Neon (پایگاه داده پستگرس) استفاده می‌کنیم:
 
+<div align="center">
+
+![مرحله ۲: ساخت دیتابیس در نئون و کپی آدرس اتصال](./docs/public/tutorial/step2-neon.svg)
+
+</div>
+
 1. وارد سایت **[neon.tech](https://neon.tech)** شوید.
 2. روی **Sign Up** کلیک کنید و گزینه **Continue with GitHub** را بزنید تا با یک کلیک وارد شوید.
 3. یک پنجره برای ساخت پروژه باز می‌شود:
@@ -62,6 +80,12 @@
 
 سرور پیام‌رسان کارهای مربوط به ارسال و دریافت ریل‌تایم پیام‌ها را انجام می‌دهد. از پلن ۱۰۰٪ رایگان Render استفاده می‌کنیم:
 
+<div align="center">
+
+![مرحله ۳: راه‌اندازی وب‌سرویس بک‌اند در رندر](./docs/public/tutorial/step3-render.svg)
+
+</div>
+
 1. وارد سایت **[render.com](https://render.com)** شوید.
 2. روی دکمه **Sign Up** کلیک کنید و گزینه **GitHub** را بزنید تا با اکانت گیت‌هاب لاگین شوید.
 3. در داشبورد Render، دکمه **+ New** (بالا سمت راست) را بزنید و گزینه **Web Service** را انتخاب کنید.
@@ -69,14 +93,15 @@
 5. اطلاعات فرم را به این شکل پر کنید:
    - **Name:** بنویسید `wihm-api`
    - **Region:** نزدیک‌ترین منطقه (مثلاً `Frankfurt` آلمان)
+   - **Root Directory:** بنویسید `server`
    - **Runtime:** گزینه `Node`
    - **Build Command:** این متن را کپی و پیست کنید:
      ```bash
-     npm --prefix server install
+     npm install
      ```
    - **Start Command:** این متن را کپی و پیست کنید:
      ```bash
-     npm --prefix server run start
+     npm start
      ```
    - **Instance Type:** گزینه **Free** (رایگان) را انتخاب کنید.
 6. کمی پایین‌تر بیایید و بخش **Environment Variables** را باز کنید. روی **Add Environment Variable** کلیک کنید و متغیرهای زیر را یکی‌یکی اضافه کنید:
@@ -84,21 +109,17 @@
 | نام متغیر (Key) | مقدار (Value) |
 |---|---|
 | `APP_ENV` | `production` |
-| `DB_CLIENT` | `postgres` |
+| `DB_CLIENT` | `pg` |
 | `POSTGRES_URL` | *(همان لینکی که در مرحله ۲ از Neon کپی کردید)* |
-| `POSTGRES_SSL` | `true` |
-| `FILE_UPLOAD` | `true` |
-| `FILE_UPLOAD_TRANSCODE_VIDEOS` | `false` |
-| `STORAGE_DRIVER` | `remote` |
-| `STORAGE_ENDPOINT` | `https://<ACCOUNT_ID>.r2.cloudflarestorage.com` *(آیدی مرحله ۱ را جایگزین کنید)* |
-| `STORAGE_BUCKET` | `wihm-uploads` *(یا نام باکتی که در مرحله ۱ گذاشتید)* |
-| `STORAGE_ACCESS_KEY_ID` | *(کد Access Key از مرحله ۱)* |
-| `STORAGE_SECRET_ACCESS_KEY` | *(کد Secret Access Key از مرحله ۱)* |
-| `STORAGE_AUTO_CORS` | `true` |
+| `STORAGE_PROVIDER` | `s3` |
+| `STORAGE_S3_BUCKET` | `wihm-uploads` *(یا نام باکتی که در مرحله ۱ گذاشتید)* |
+| `STORAGE_S3_REGION` | `auto` |
+| `STORAGE_S3_ENDPOINT` | `https://<ACCOUNT_ID>.r2.cloudflarestorage.com` *(آیدی مرحله ۱ را جایگزین کنید)* |
+| `STORAGE_S3_KEY` | *(کد Access Key از مرحله ۱)* |
+| `STORAGE_S3_SECRET` | *(کد Secret Access Key از مرحله ۱)* |
+| `CORS_ORIGIN` | `*` |
 | `COOKIE_SAME_SITE` | `None` |
-| `APP_PUBLIC_URL` | `*` |
-| `CALL` | `true` |
-| `CALL_VIDEO` | `true` |
+| `COOKIE_SECURE` | `true` |
 
 7. در پایین صفحه، روی دکمه **Deploy Web Service** کلیک کنید.
 8. حدود ۲ دقیقه صبر کنید تا عبارت **Live** به رنگ سبز نشان داده شود.
@@ -110,6 +131,12 @@
 
 این بخش همان ظاهر و سایت پیام‌رسان است که به کاربران نمایش داده می‌شود:
 
+<div align="center">
+
+![مرحله ۴: راه‌اندازی فرانت‌اند چت در کلادفلر پیجز](./docs/public/tutorial/step4-pages.svg)
+
+</div>
+
 1. به داشبورد کلادفلر [dash.cloudflare.com](https://dash.cloudflare.com) برگردید.
 2. از منوی سمت چپ به بخش **Workers & Pages** بروید.
 3. روی دکمه **Create application** و سپس سربرگ **Pages** کلیک کنید.
@@ -120,7 +147,7 @@
    - **Build command:** بنویسید `npm run build`
    - **Build output directory:** بنویسید `dist`
 6. بخش **Environment variables** را باز کرده و این یک مورد را اضافه کنید:
-   - **Variable name:** `VITE_API_BASE`
+   - **Variable name:** `VITE_API_URL`
    - **Value:** همان آدرس سرور که در پایان مرحله ۳ از Render کپی کردید (مثال: `https://wihm-api.onrender.com`)
 7. روی دکمه آبی‌رنگ **Save and Deploy** کلیک کنید.
 8. حدود ۱ الی ۲ دقیقه فرآیند ساخت زمان می‌برد. پس از اتمام، دکمه **Continue to project** را بزنید.
@@ -149,6 +176,13 @@
 
 ### ۲. سرور بعد از چند دقیقه که کسی چت نمی‌کند خاموش می‌شود، چکار کنم؟
 سرویس‌های رایگان رندر برای صرفه‌جویی، در صورت عدم فعالیت به حالت خواب می‌روند. برای جلوگیری از این کار:
+
+<div align="center">
+
+![مرحله ۵: بیدار نگه داشتن سرور با آپ‌تایم روبات](./docs/public/tutorial/step5-uptimerobot.svg)
+
+</div>
+
 1. در سایت رایگان **[uptimerobot.com](https://uptimerobot.com)** ثبت‌نام کنید.
 2. یک مانیتور جدید از نوع `HTTP(s)` بسازید و آدرس سلامت سرورتان را بدهید:  
    `https://wihm-api.onrender.com/api/health`

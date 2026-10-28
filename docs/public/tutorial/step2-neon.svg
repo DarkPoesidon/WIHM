@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="480" rx="16" fill="url(#bgGrad2)" stroke="#334155" stroke-width="2" />
+
+  <!-- Header -->
+  <g transform="translate(425, 36)">
+    <text text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#f8fafc">مرحله ۲: ساخت دیتابیس رایگان در Neon (PostgreSQL)</text>
+    <text text-anchor="middle" y="22" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">ذخیره خودکار و ابری پیام‌ها، کاربران، چت‌ها و تنظیمات بدون هزینه</text>
+  </g>
+
+  <!-- Left Card: Creating Project in Neon -->
+  <g transform="translate(40, 80)" filter="url(#shadow2)">
+    <rect width="360" height="360" rx="12" fill="#1e293b" stroke="#00e599" stroke-width="1.5" />
+    <rect x="0" y="0" width="360" height="38" rx="12" fill="#00e599" />
+    <rect x="0" y="24" width="360" height="14" fill="#00e599" />
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">۱. ساخت پروژه در سایت Neon.tech</text>
+
+    <text x="24" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">ورود به کنسول نئون:</text>
+    <rect x="24" y="75" width="312" height="28" rx="6" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="93" font-family="monospace" font-size="11" fill="#00e599">console.neon.tech (با گیت‌هاب لاگین کنید)</text>
+
+    <text x="24" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">نام پروژه (Project name):</text>
+    <rect x="24" y="140" width="312" height="32" rx="6" fill="#0f172a" stroke="#00e599" stroke-width="1.5" />
+    <text x="35" y="161" font-family="monospace" font-size="13" fill="#f8fafc">wihm-database</text>
+
+    <text x="24" y="198" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">نسخه دیتابیس (Postgres version):</text>
+    <rect x="24" y="208" width="312" height="30" rx="6" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="228" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">PostgreSQL 16 یا 17 (پیش‌فرض)</text>
+
+    <!-- Create Button -->
+    <rect x="24" y="260" width="312" height="36" rx="8" fill="#00e599" />
+    <text x="180" y="283" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">کلیک روی Create project ✓</text>
+
+    <rect x="24" y="312" width="312" height="32" rx="6" fill="#334155" fill-opacity="0.5" />
+    <text x="180" y="332" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#34d399">✓ دیتابیس شما در ۳ ثانیه ساخته و آماده شد</text>
+  </g>
+
+  <!-- Right Card: Copying Connection String -->
+  <g transform="translate(450, 80)" filter="url(#shadow2)">
+    <rect width="360" height="360" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.5" />
+    <rect x="0" y="0" width="360" height="38" rx="12" fill="#059669" />
+    <rect x="0" y="24" width="360" height="14" fill="#059669" />
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">۲. کپی کردن آدرس اتصال (Connection string)</text>
+
+    <text x="24" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">در داشبورد پروژه، کادر Connection Details را ببینید:</text>
+
+    <!-- Connection Box Mockup -->
+    <rect x="24" y="85" width="312" height="160" rx="8" fill="#020617" stroke="#00e599" stroke-width="1" />
+    
+    <text x="35" y="110" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#34d399">Connect to your database:</text>
+    
+    <rect x="35" y="125" width="100" height="24" rx="4" fill="#1e293b" />
+    <text x="85" y="141" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#f8fafc">Postgres role: neondb</text>
+
+    <rect x="35" y="160" width="290" height="42" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="45" y="178" font-family="monospace" font-size="9.5" fill="#38bdf8">postgresql://alex:abc123xyz@ep-cold-...</text>
+    <text x="45" y="193" font-family="monospace" font-size="9.5" fill="#38bdf8">neon.tech/neondb?sslmode=require</text>
+
+    <!-- Copy Button Highlight -->
+    <rect x="180" y="210" width="145" height="26" rx="6" fill="#00e599" />
+    <text x="252" y="227" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0f172a">📋 Copy Connection string</text>
+
+    <text x="24" y="270" font-family="system-ui, sans-serif" font-size="11" fill="#fbbf24">💡 این متن بلند را هم به فایل نوت‌پد خود اضافه کنید.</text>
+    <text x="24" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">این آدرس به عنوان POSTGRES_URL در سرور قرار می‌گیرد.</text>
+
+    <!-- Note footer -->
+    <rect x="24" y="312" width="312" height="32" rx="6" fill="#334155" fill-opacity="0.5" />
+    <text x="180" y="332" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#f8fafc">با این آدرس، سرور جدول‌های دیتابیس را خودکار می‌سازد</text>
+  </g>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="480" rx="16" fill="url(#bgGrad4)" stroke="#334155" stroke-width="2" />
+
+  <!-- Header -->
+  <g transform="translate(425, 36)">
+    <text text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#f8fafc">مرحله ۴: راه‌اندازی فرانت‌اند چت در Cloudflare Pages</text>
+    <text text-anchor="middle" y="22" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">سایت چت آنلاین با CDN جهانی کلادفلر و ترافیک نامحدود کاملاً رایگان</text>
+  </g>
+
+  <!-- Left Card: Connect Git & Build Settings -->
+  <g transform="translate(40, 80)" filter="url(#shadow4)">
+    <rect width="360" height="360" rx="12" fill="#1e293b" stroke="#f38020" stroke-width="1.5" />
+    <rect x="0" y="0" width="360" height="38" rx="12" fill="#f38020" />
+    <rect x="0" y="24" width="360" height="14" fill="#f38020" />
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">۱. اتصال گیت‌هاب و تنظیمات Build</text>
+
+    <!-- Project name -->
+    <text x="24" y="62" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">نام پروژه در کلادفلر (Project name):</text>
+    <rect x="24" y="70" width="312" height="26" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="87" font-family="monospace" font-size="11" fill="#f8fafc">wihm</text>
+
+    <!-- Framework Preset -->
+    <text x="24" y="112" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">پریست فریم‌ورک (Framework preset):</text>
+    <rect x="24" y="120" width="312" height="26" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="137" font-family="monospace" font-size="11" fill="#f8fafc">Vite</text>
+
+    <!-- Root Directory -->
+    <text x="24" y="162" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">پوشه اصلی فرانت‌اند (Root directory): <tspan fill="#f38020">(مهم)</tspan></text>
+    <rect x="24" y="170" width="312" height="26" rx="5" fill="#0f172a" stroke="#f38020" stroke-width="1.5" />
+    <text x="35" y="187" font-family="monospace" font-size="11" font-weight="bold" fill="#fba742">client</text>
+
+    <!-- Build Command -->
+    <text x="24" y="212" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">دستور ساخت (Build command):</text>
+    <rect x="24" y="220" width="312" height="26" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="237" font-family="monospace" font-size="11" fill="#f8fafc">npm run build</text>
+
+    <!-- Output directory -->
+    <text x="24" y="262" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">پوشه خروجی (Build output directory):</text>
+    <rect x="24" y="270" width="312" height="26" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="287" font-family="monospace" font-size="11" fill="#f8fafc">dist</text>
+
+    <rect x="24" y="312" width="312" height="32" rx="6" fill="#334155" fill-opacity="0.5" />
+    <text x="180" y="332" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">ریپازیتوری را انتخاب کرده و مقادیر بالا را تنظیم کنید</text>
+  </g>
+
+  <!-- Right Card: Environment Variable & Final Deploy -->
+  <g transform="translate(450, 80)" filter="url(#shadow4)">
+    <rect width="360" height="360" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="0" y="0" width="360" height="38" rx="12" fill="#0284c7" />
+    <rect x="0" y="24" width="360" height="14" fill="#0284c7" />
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">۲. اتصال فرانت‌اند به سرور و دیپلوی نهایی</text>
+
+    <text x="24" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">در بخش Environment variables (مرحله ۴):</text>
+
+    <!-- Env Box -->
+    <rect x="24" y="80" width="312" height="90" rx="8" fill="#020617" stroke="#38bdf8" stroke-width="1" />
+    <text x="35" y="105" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Variable name (نام متغیر):</text>
+    <text x="35" y="123" font-family="monospace" font-size="12" fill="#f8fafc">VITE_API_URL</text>
+
+    <text x="35" y="145" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#34d399">Value (مقدار - لینک رندر از مرحله ۳):</text>
+    <text x="35" y="162" font-family="monospace" font-size="10.5" fill="#a5f3fc">https://wihm-backend.onrender.com</text>
+
+    <!-- Deploy Button -->
+    <rect x="24" y="190" width="312" height="38" rx="8" fill="#f38020" />
+    <text x="180" y="214" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">کلیک روی Save and Deploy 🚀</text>
+
+    <!-- Success Result -->
+    <rect x="24" y="250" width="312" height="75" rx="8" fill="#064e3b" stroke="#10b981" />
+    <circle cx="48" cy="287" r="14" fill="#10b981" />
+    <path d="M42 287 L46 291 L54 283" stroke="#ffffff" stroke-width="2.5" fill="none" />
+    
+    <text x="72" y="278" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#a7f3d0">تبریک! برنامه شما آماده و آنلاین است:</text>
+    <text x="72" y="300" font-family="monospace" font-size="11" fill="#6ee7b7">https://wihm.pages.dev</text>
+    <text x="72" y="316" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">(یا دامنه شخصی شما روی کلادفلر)</text>
+  </g>
+</svg>

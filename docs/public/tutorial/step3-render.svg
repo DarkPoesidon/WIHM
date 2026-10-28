@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 510" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="510" rx="16" fill="url(#bgGrad3)" stroke="#334155" stroke-width="2" />
+
+  <!-- Header -->
+  <g transform="translate(425, 36)">
+    <text text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#f8fafc">مرحله ۳: راه‌اندازی سرور بک‌اند در Render (پلن کاملاً رایگان)</text>
+    <text text-anchor="middle" y="22" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">اتصال به ریپازیتوری شما در گیت‌هاب و اجرای Node.js</text>
+  </g>
+
+  <!-- Left Card: Basic Service Config -->
+  <g transform="translate(40, 75)" filter="url(#shadow3)">
+    <rect width="360" height="405" rx="12" fill="#1e293b" stroke="#00b4d8" stroke-width="1.5" />
+    <rect x="0" y="0" width="360" height="38" rx="12" fill="#00b4d8" />
+    <rect x="0" y="24" width="360" height="14" fill="#00b4d8" />
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#0f172a">۱. تنظیمات ساخت سرویس در render.com</text>
+
+    <!-- Field 1: Name -->
+    <text x="24" y="62" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">نام سرویس (Name):</text>
+    <rect x="24" y="70" width="312" height="26" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="87" font-family="monospace" font-size="11" fill="#f8fafc">wihm-backend</text>
+
+    <!-- Field 2: Root Directory -->
+    <text x="24" y="112" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">پوشه اصلی (Root Directory): <tspan fill="#38bdf8">(خیلی مهم)</tspan></text>
+    <rect x="24" y="120" width="312" height="26" rx="5" fill="#0f172a" stroke="#00b4d8" stroke-width="1.5" />
+    <text x="35" y="137" font-family="monospace" font-size="11" font-weight="bold" fill="#38bdf8">server</text>
+
+    <!-- Field 3: Environment -->
+    <text x="24" y="162" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">محیط اجرا (Runtime):</text>
+    <rect x="24" y="170" width="312" height="26" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="187" font-family="monospace" font-size="11" fill="#f8fafc">Node</text>
+
+    <!-- Field 4: Build Command -->
+    <text x="24" y="212" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">دستور ساخت (Build Command):</text>
+    <rect x="24" y="220" width="312" height="26" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="237" font-family="monospace" font-size="11" fill="#f8fafc">npm install</text>
+
+    <!-- Field 5: Start Command -->
+    <text x="24" y="262" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">دستور اجرا (Start Command):</text>
+    <rect x="24" y="270" width="312" height="26" rx="5" fill="#0f172a" stroke="#475569" />
+    <text x="35" y="287" font-family="monospace" font-size="11" fill="#f8fafc">npm start</text>
+
+    <!-- Field 6: Instance Plan -->
+    <text x="24" y="312" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">پلن سرور (Instance Type):</text>
+    <rect x="24" y="320" width="312" height="28" rx="5" fill="#0369a1" fill-opacity="0.25" stroke="#38bdf8" />
+    <text x="35" y="338" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">🔘 Free ($0/month - ۵۱۲ مگابایت رم)</text>
+
+    <!-- Save button -->
+    <rect x="24" y="360" width="312" height="32" rx="6" fill="#00b4d8" />
+    <text x="180" y="381" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f172a">ایجاد وب سرویس (Create Web Service) ✓</text>
+  </g>
+
+  <!-- Right Card: Environment Variables -->
+  <g transform="translate(450, 75)" filter="url(#shadow3)">
+    <rect width="360" height="405" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="0" y="0" width="360" height="38" rx="12" fill="#0284c7" />
+    <rect x="0" y="24" width="360" height="14" fill="#0284c7" />
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">۲. متغیرهای محیطی (Environment Variables)</text>
+
+    <text x="24" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">کلید و مقادیر زیر را در بخش Environment وارد کنید:</text>
+
+    <!-- Env Vars Table Mockup -->
+    <rect x="20" y="70" width="320" height="295" rx="6" fill="#020617" stroke="#334155" />
+    
+    <!-- Row 1 -->
+    <text x="28" y="90" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">DB_CLIENT</text>
+    <text x="175" y="90" font-family="monospace" font-size="10" fill="#a5f3fc">= pg</text>
+
+    <!-- Row 2 -->
+    <text x="28" y="116" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">POSTGRES_URL</text>
+    <text x="175" y="116" font-family="monospace" font-size="9" fill="#34d399">= (لینک از مرحله ۲)</text>
+
+    <!-- Row 3 -->
+    <text x="28" y="142" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">STORAGE_PROVIDER</text>
+    <text x="175" y="142" font-family="monospace" font-size="10" fill="#a5f3fc">= s3</text>
+
+    <!-- Row 4 -->
+    <text x="28" y="168" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">STORAGE_S3_BUCKET</text>
+    <text x="175" y="168" font-family="monospace" font-size="10" fill="#a5f3fc">= wihm-uploads</text>
+
+    <!-- Row 5 -->
+    <text x="28" y="194" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">STORAGE_S3_REGION</text>
+    <text x="175" y="194" font-family="monospace" font-size="10" fill="#a5f3fc">= auto</text>
+
+    <!-- Row 6 -->
+    <text x="28" y="220" font-family="monospace" font-size="9.5" font-weight="bold" fill="#38bdf8">STORAGE_S3_ENDPOINT</text>
+    <text x="175" y="220" font-family="monospace" font-size="8.5" fill="#fba742">= https://&lt;ACCOUNT_ID&gt;...</text>
+
+    <!-- Row 7 -->
+    <text x="28" y="246" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">STORAGE_S3_KEY</text>
+    <text x="175" y="246" font-family="monospace" font-size="9" fill="#a5f3fc">= (Access Key ID)</text>
+
+    <!-- Row 8 -->
+    <text x="28" y="272" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">STORAGE_S3_SECRET</text>
+    <text x="175" y="272" font-family="monospace" font-size="9" fill="#fb7185">= (Secret Access Key)</text>
+
+    <!-- Row 9 -->
+    <text x="28" y="298" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">CORS_ORIGIN</text>
+    <text x="175" y="298" font-family="monospace" font-size="10" fill="#a5f3fc">= *</text>
+
+    <!-- Row 10 -->
+    <text x="28" y="324" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">COOKIE_SAME_SITE</text>
+    <text x="175" y="324" font-family="monospace" font-size="10" fill="#a5f3fc">= None</text>
+
+    <!-- Row 11 -->
+    <text x="28" y="350" font-family="monospace" font-size="10" font-weight="bold" fill="#38bdf8">COOKIE_SECURE</text>
+    <text x="175" y="350" font-family="monospace" font-size="10" fill="#a5f3fc">= true</text>
+
+    <!-- Footer output URL -->
+    <rect x="20" y="372" width="320" height="28" rx="6" fill="#065f46" />
+    <text x="180" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#a7f3d0">🔗 لینک سرور را بردارید: https://wihm-backend.onrender.com</text>
+  </g>
+</svg>
